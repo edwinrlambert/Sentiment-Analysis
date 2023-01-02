@@ -1,0 +1,113 @@
+@import url('https://fonts.cdnfonts.com/css/open-sans');
+
+* {
+    font-family: 'Open Sans', sans-serif;
+}
+
+body {
+    background-color: #D2F2F0;
+}
+
+main {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%)
+}
+
+h1 {
+    margin-bottom: 30px;
+    line-height: 0.75;
+    letter-spacing: -3px;
+    font-size: 3em;
+    color: #343a40;
+}
+
+.sentiment-text {
+    color: #D2686E;
+    font-weight: bold;
+}
+
+.prompt-buttons {
+    margin-top: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+}
+
+.prompt-buttons>button {
+    width: 100px;
+    margin-right: 5px;
+    margin-bottom: 10px;
+}
+
+.form-label {
+    display: inline;
+    font-weight: bold;
+}
+
+#form-input-textarea {
+    display: inline-block;
+    min-height: 150px;
+    height: max-content;
+}
+
+#form-input-url {
+    display: inline-block;
+    height: max-content;
+}
+
+.submit-button > input {
+    margin: 5px 0;
+    background-color: #D2686E;
+    border-color: #D2686E;
+}
+
+#overlay {
+    position: fixed;
+    display: none;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 2;
+    cursor: pointer;
+}
+
+#overlay-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    color: white;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+}
+
+#overlay-content h2 {
+    margin-bottom: -5px;
+    line-height: 0.05;
+    font-size: medium;
+}
+
+#overlay-content p#prominent-sentiment {
+    margin-top: 0;
+    display: inline-block;
+    font-size: 4em;
+    font-weight: bolder;
+}
+
+#overlay-content #sentiment-info {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+#overlay-content #sentiment-info canvas#sentiment-radar-chart {
+    width: 5px;
+    height: 5px;
+}
